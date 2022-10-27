@@ -4,11 +4,14 @@ import foodImage from '../../assets/images/lily-banse--YHSwy6uqvk-unsplash.jpg'
 import HeaderCartButton from "./HeaderCartButton";
 
 const Header= (props) => {
+    const cartButtonHandler = () =>{
+        props.onCartClicked()
+    }
     return (
         <>
            <header className={classes.header}>
                <h1>ReactMeals</h1>
-               <HeaderCartButton>Cart</HeaderCartButton>
+               <HeaderCartButton onClick={cartButtonHandler}>Cart</HeaderCartButton>
            </header>
            <div className={classes['main-image']}>
                <img src={foodImage} alt='Food bowls- by Lily Banse on Unsplash'/>
