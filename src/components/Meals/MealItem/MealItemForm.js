@@ -5,7 +5,9 @@ const MealItemForm = (props) => {
     return (
         <form className={classes.form}>
             <input />
-            <button >Add</button>
+            <button >-</button>
+            <button >+</button>
+
         </form>
     );
 };
