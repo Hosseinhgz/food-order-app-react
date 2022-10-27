@@ -5,17 +5,17 @@ import Cart from "./components/Cart/Cart";
 
 
 function App() {
-    const [isModalVisible,setIsModalVisible] = useState(false)
-    const cartClickHandler = () =>{
-        setIsModalVisible(true)
+    const [isCartVisible,setIsCartVisible] = useState(false)
+    const showCartHandler = () =>{
+        setIsCartVisible(true)
     }
-    const onCloseModalHandler = ()=>{
-        setIsModalVisible(false)
+    const hideCartHandler = ()=>{
+        setIsCartVisible(false)
     }
   return (
     <>
-        {isModalVisible && <Cart onCloseModal={onCloseModalHandler}/>}
-        <Header onCartClicked={cartClickHandler}/>
+        {isCartVisible && <Cart onCloseModal={hideCartHandler}/>}
+        <Header onCartClicked={showCartHandler}/>
         <main>
             <Meals />
         </main>
