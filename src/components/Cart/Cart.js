@@ -9,9 +9,6 @@ const Cart = (props) => {
 
     ]
 
-    const modalCloseHandler = ()=>{
-        props.onCloseModal()
-    }
     const cartItems = <ul className={classes['cart-items']}>
         {CART_ITEMS.map(item => {
                 return(
@@ -23,14 +20,14 @@ const Cart = (props) => {
             })}
     </ul>
     return (
-        <Modal>
+        <Modal onClose={props.onCloseModal}>
             {cartItems}
             <div className={classes.total}>
                 <span>Total Amount</span>
                 <span>35.62</span>
             </div>
             <div className={classes.actions}>
-                <button className={classes['button--alt']} onClick={modalCloseHandler}>Close</button>
+                <button className={classes['button--alt']} onClick={props.onCloseModal}>Close</button>
                 <button className={classes.button}>Order</button>
             </div>
         </Modal>
