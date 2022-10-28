@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from './Cart.module.css'
 import Modal from "../UI/Modal";
 
@@ -8,7 +7,6 @@ const Cart = (props) => {
         {id:'c2', name:'Noodle', price:10.99},
 
     ]
-
     const cartItems = <ul className={classes['cart-items']}>
         {CART_ITEMS.map(item => {
                 return(
