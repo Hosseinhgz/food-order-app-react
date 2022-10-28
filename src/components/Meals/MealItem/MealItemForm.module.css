@@ -8,11 +8,10 @@
     background-color: #3e167a;
     border: 1px solid #633db4;
     color: white;
-    border-radius: 50px;
+    border-radius: 10px;
     font-weight: bold;
     margin: 5px;
-    height: 35px;
-    width: 35px;
+    padding: 5px 10px;
 
 }
 
